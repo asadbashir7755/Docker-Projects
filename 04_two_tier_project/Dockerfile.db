@@ -1,0 +1,4 @@
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD=asad123
+ENV MYSQL_DATABASE=linksdb
+COPY nodejs-mysql-links/database/db.sql /docker-entrypoint-initdb.d/

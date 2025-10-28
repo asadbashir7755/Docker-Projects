@@ -1,0 +1,51 @@
+# version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: asad123
+      MYSQL_DATABASE: linksdb
+    volumes:
+      # - mysql-data:/var/lib/mysql
+      - /home/asad/Desktop/Asad/DevOpS-Practice/docker_projects/volumes/mysql:/var/lib/mysql 
+    ports:
+      - "3307:3306"
+
+    # healthcheck:
+    #   test: ["CMD", "mysqladmin","ping","-h","localhost","-pAsad123"]
+    #   interval: 1m30s
+    #   timeout: 30s
+    #   retries: 5
+    #   start_period: 30s
+
+  nodeapp:
+    build: 
+      context: .
+    container_name: two-tier-nodeapp
+    restart: unless-stopped
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USER: root  
+      DATABASE_PASSWORD: asad123
+      DATABASE_NAME: linksdb
+      DATABASE_PORT: 3306
+      PORT: 4000
+      SECRET: asadkey
+    ports:
+      - 4000:4000
+    depends_on:
+      - db
+    # healthcheck:
+    #   test: ["CMD-SHELL", "curl -f http://localhost:4000/health || exit 1"]
+    #   interval: 1m30s
+    #   timeout: 30s
+    #   retries: 5
+    #   start_period: 30s
+
+    
+
+
+
