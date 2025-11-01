@@ -1,0 +1,59 @@
+2025-10-31T07:52:03.038Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:03.146Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /profile [32m200[0m 109.035 ms - 3152[0m
+2025-10-31T07:52:03.404Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:03.416Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 14.210 ms - -[0m
+2025-10-31T07:52:05.483Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:05.529Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /links [36m304[0m 47.700 ms - -[0m
+2025-10-31T07:52:05.752Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:05.768Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 16.988 ms - -[0m
+2025-10-31T07:52:52.896Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:52.959Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /profile [36m304[0m 63.371 ms - -[0m
+2025-10-31T07:52:53.254Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:53.261Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 6.983 ms - -[0m
+2025-10-31T07:52:58.368Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:58.435Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /links/add [32m200[0m 50.891 ms - 4001[0m
+2025-10-31T07:52:58.837Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:52:58.844Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 7.978 ms - -[0m
+2025-10-31T07:53:23.788Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:53:23.815Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /profile [36m304[0m 27.473 ms - -[0m
+2025-10-31T07:53:24.193Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:53:24.205Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 13.105 ms - -[0m
+2025-10-31T07:53:36.324Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:53:36.388Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /links [36m304[0m 63.938 ms - -[0m
+2025-10-31T07:53:36.627Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:53:36.637Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 10.930 ms - -[0m
+2025-10-31T07:54:00.953Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+Error Error: Not Found
+    at file:///app/src/app.js:66:15
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/app/node_modules/express/lib/router/index.js:328:13)
+    at /app/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/app/node_modules/express/lib/router/index.js:346:12)
+    at Immediate.next (/app/node_modules/express/lib/router/index.js:280:10)
+    at Immediate._onImmediate (/app/node_modules/express/lib/router/index.js:646:15)
+    at process.processImmediate (node:internal/timers:478:21) {
+  status: 404
+}
+2025-10-31T07:54:01.016Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /links/hvvhvhvkh%20b [33m404[0m 58.520 ms - 3232[0m
+2025-10-31T07:54:01.185Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:54:01.196Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 11.944 ms - -[0m
+2025-10-31T07:54:25.142Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:54:25.223Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /links [36m304[0m 80.186 ms - -[0m
+2025-10-31T07:54:25.410Z express-mysql-session:log Getting session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+2025-10-31T07:54:25.419Z express-mysql-session:log Touching session: nbPbwTGQGkeT_gW7YYDpvRfnskrpqnvb
+[0mGET /css/styles.css [36m304[0m 12.272 ms - -[0m

@@ -1,0 +1,33 @@
+
+
+# ---------- Stage 1: Builder ----------
+# FROM node:18-alpine AS builder
+FROM node:18-alpine
+
+LABEL maintainer="asadbashir2229526@gmail.com"
+LABEL version="1.0"
+LABEL description="two tier application to practice docker networking"
+
+WORKDIR /app
+
+# Copy only package files to install dependencies
+COPY nodejs-mysql-links/package*.json ./
+
+# Install all dependencies (node_modules will be created here inside /app)
+RUN npm install
+
+# ---------- Stage 2: Final Image ----------
+# FROM node:18-slim
+# WORKDIR /app
+
+# Copy installed node_modules from builder stage
+# COPY --from=builder /app/node_modules ./node_modules
+
+# Copy application source code
+COPY nodejs-mysql-links/ ./
+
+# Expose app port
+EXPOSE 4000
+
+# Run the app
+CMD ["npm", "run", "dev"]
