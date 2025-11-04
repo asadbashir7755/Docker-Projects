@@ -123,3 +123,37 @@
 
 * **Forward Proxy:**
   Acts on behalf of the **client**, forwarding requests to the internet (e.g., used for filtering, caching, or hiding client identity).
+
+
+location / {
+    try_files $uri /index.html;
+}
+$uri → the file requested by the browser (like /about)
+
+If /about exists on the server → serve it
+
+If it doesn’t exist → serve /index.html (so SPA router can handle it)
+
+💡 Key: try_files serves files locally, doesn’t talk to another server.
+
+
+
+in case of reverse proxy 
+location / {
+    proxy_pass http://django_cont:8000;
+}
+Client requests http://localhost/some-api/
+
+Nginx forwards it to http://django_cont:8000/some-api/
+
+Backend (Django) processes request and sends response → Nginx → client
+
+💡 Key: proxy_pass talks to another server/service.
+
+healthcheck:
+  test: ["CMD-SHELL", "curl -f http://127.0.0.1:5000 || exit 1"]
+  interval: 5s
+  retries: 5
+  start_period: 5s
+ its mor robust then simple health check
+ 
