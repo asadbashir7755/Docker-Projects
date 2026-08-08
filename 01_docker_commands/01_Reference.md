@@ -75,7 +75,7 @@ Docker is a platform used to **build, package, and run applications** in isolate
 
      ```bash
      docker network create mycustomnetwork -d bridge
-     docker run -d --name mysql-container --network mycustomnetwork -e MYSQL_ROOT_PASSWORD=asad123 -e MYSQL_DATABASE=linksdb -p 3307:3306 mysql
+     docker run -d --name mysql-container --network mycustomnetwork -e MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} -e MYSQL_DATABASE=linksdb -p 3307:3306 mysql
      docker run -d --name nodeapp --network mycustomnetwork -p 4000:4000 nodeapp-image
      ```
 
@@ -103,7 +103,7 @@ Used to **automatically create a database** and initialize it from SQL file:
 
 ```dockerfile
 FROM mysql:latest
-ENV MYSQL_ROOT_PASSWORD=asad123
+ENV MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 ENV MYSQL_DATABASE=linksdb
 COPY db.sql /docker-entrypoint-initdb.d/
 ```
@@ -157,7 +157,7 @@ services:
     image: mysql:latest
     container_name: mysql-container
     environment:
-      MYSQL_ROOT_PASSWORD: asad123
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: linksdb
     volumes:
       - mysql-data:/var/lib/mysql
@@ -171,7 +171,7 @@ services:
     environment:
       DATABASE_HOST: db
       DATABASE_USER: root
-      DATABASE_PASSWORD: asad123
+      DATABASE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       DATABASE_NAME: linksdb
       DATABASE_PORT: 3306
       PORT: 4000
